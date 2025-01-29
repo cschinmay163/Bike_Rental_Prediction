@@ -13,14 +13,19 @@ The goal of this project is to predict daily bike rental demand to optimize inve
    - **Understock Cost**: Opportunity loss due to unmet demand.
 
 ### Profit Statement
-\[
-\text{Profit} = \text{Rental Income} - \text{Overstock Cost} - \text{Understock Cost}
-\]
-Where:
-- **Rental Income**: \( \text{Rental Price} \times \min(\text{Predicted Demand}, \text{Actual Demand}) \)
-- **Overstock Cost**: \( \text{Holding Cost per Bike} \times \max(0, \text{Predicted Demand} - \text{Actual Demand}) \)
-- **Understock Cost**: \( \text{Rental Price} \times \max(0, \text{Actual Demand} - \text{Predicted Demand}) \)
+Profit Statement
+The profit for the bike rental business is calculated as:
 
+Profit = Rental Income − Overstock Cost − Understock Cost
+
+Where:
+
+Rental Income: The revenue earned from fulfilling bike rental demand:
+Rental Income = Rental Price × min(Predicted Demand, Actual Demand)
+Overstock Cost: The cost incurred from storing excess inventory beyond actual demand:
+Overstock Cost = Holding Cost per Bike × max(0, Predicted Demand − Actual Demand)
+Understock Cost: The opportunity cost of unmet demand:
+Understock Cost = Rental Price × max(0, Actual Demand − Predicted Demand)
 ---
 
 ## Assumptions About Costs
